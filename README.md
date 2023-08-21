@@ -4,6 +4,7 @@ So... dev container options:
 - use VSCode "Dev Containers"
 - use Docker Desktop "Dev Environments"
 - manually use docker (or docker-compose) to run dev containers however you want
+
 (likely in easiest-to-hardest but inflexible-to-flexible order)
 
 Perhaps we should stick an option for GitHub CodeSpaces... dunno.
