@@ -49,15 +49,15 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
-# [Optional] Set the default user. Omit if you want to keep the default as root.
-USER $USERNAME
-
+VOLUME /workspace
 WORKDIR /workspace
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-VOLUME /workspace
+# [Optional] Set the default user. Omit if you want to keep the default as root.
+USER $USERNAME
+
 CMD ["bash"]
 ```
 
